@@ -8,7 +8,9 @@
 to make calculations easy, we set font size of html as 62.5% which makes 1 rem =10px
 */
 
+/*Typography*/
 html {
+  margin: 0.5rem;
   font-size: 62.5%;
 }
 
@@ -58,4 +60,64 @@ h3 {
   h3 {
     font-size: 2.4rem;
   }
-} ;
+}
+
+/*Links*/
+/*to remove underline from all the anchor tags*/
+a {
+  text-decoration: none;
+}
+
+.link-arrow {
+  font-weight: bold;
+  font-size: 2rem;
+  color: var(--color-secondary);
+  text-transform: uppercase;
+}
+.link-arrow::after {
+  content: '-->';
+  margin-left: 5px; /*to avoid changing the margin we are using px*/
+}
+
+/*to add hover effect to arrow in link*/
+.link-arrow:hover::after {
+  margin-left: 10px;
+  transition: margin 0.4s;
+}
+
+@media screen and (min-width: 1024px) {
+  .link-arrow {
+    font-size: 1.5rem;
+  }
+}
+
+/*Badges*/
+.badge {
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  font-size: 2rem;
+  white-space: nowrap;
+  color: white;
+}
+/*here we are going to use BEM model and object oriented CSS */
+.badge--primary {
+  background: var(--color-primary);
+}
+
+.badge--secondry {
+  background: var(--color-secondary);
+}
+.badge--small {
+  font-size: 1.6rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .badge {
+    font-size: 1.5rem;
+  }
+
+  .badge--small {
+    font-size: 1.2rem;
+  }
+}
