@@ -152,3 +152,27 @@ a {
     padding: 0;
   }
 }
+
+/*Icons*/
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+/*to add circle behind icon*/
+.icon_container {
+  background: rgba(255, 255, 255, 0.616);
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+  /*as span is inline element, we cannot apply width and height prop*/
+  display: inline-flex;
+  /*we are using inline-flex to center the icon inside this container*/
+  justify-content: center;
+  align-items: center;
+}
+
+/*To add colours to our icon*/
+.icon__primary {
+  fill: var(--color-primary);
+}
