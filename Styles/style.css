@@ -310,3 +310,24 @@ button {
 .content h3 {
   margin-top: 0;
 }
+
+/*Grid layout */
+.grid {
+  display: grid;
+}
+
+/**starting from tablets we want to show col side by side **/
+
+@media screen and (min-width: 768px) {
+  .grid--cols-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /**just incase you need three col grid **/
+  .grid--cols-3 {
+    grid-template-columns: repeat(
+      3,
+      1fr
+    ); /*no difference wrt to .grid--cols-2; can write in both ways*/
+  }
+}
