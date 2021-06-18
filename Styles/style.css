@@ -163,6 +163,7 @@ a {
 }
 
 /*Icons*/
+
 .icon {
   width: 40px;
   height: 40px;
@@ -170,15 +171,15 @@ a {
 
 /*to add circle behind icon*/
 .icon_container {
-  background: rgba(255, 255, 255, 0.616);
+  background: rgb(126, 125, 122);
   width: 64px;
   height: 64px;
   border-radius: 100%;
   /*as span is inline element, we cannot apply width and height prop*/
-  display: inline-flex;
+  /* display: inline; */
   /*we are using inline-flex to center the icon inside this container*/
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
 }
 
 /*To add colours to our icon*/
@@ -270,4 +271,42 @@ button {
   .input {
     font-size: 1.5rem;
   }
+}
+
+/*Cards*/
+.container {
+  justify-content: center;
+  margin-top: 50px;
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    display: flex;
+  }
+}
+
+.card {
+  position: relative;
+  width: 35rem;
+  background: var(--white);
+  margin: 10px;
+  margin-bottom: 3rem;
+  padding: 3rem;
+  /* border: 1px solid grey; */
+  border-radius: 15px;
+  box-shadow: 1px 5px 15px 2px rgba(212, 192, 192, 0.83);
+  -webkit-box-shadow: 1px 5px 15px 2px rgba(212, 192, 192, 0.83);
+  -moz-box-shadow: 1px 5px 15px 2px rgba(212, 192, 192, 0.83);
+}
+
+.card_image {
+  position: absolute;
+  top: -10%;
+}
+.card_image .icon {
+  fill: gold;
+}
+
+.content h3 {
+  margin-top: 0;
 }
