@@ -28,6 +28,7 @@ html {
   --white: #fcfcfc;
   --font: 'Inter', sans-serif;
   --button-color: #46237a;
+  --border-color: #ccc;
 }
 
 body {
@@ -228,6 +229,7 @@ button {
 @media screen and (min-width: 1024px) {
   .btn {
     font-size: 1.5rem;
+    padding: 1rem 2rem;
   }
 }
 
@@ -236,7 +238,7 @@ button {
   padding: 1rem 2rem;
   outline: 0;
   font-size: 2rem;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-color);
   border-radius: 30px;
   color: var(--heading);
   font-weight: 600;
@@ -244,6 +246,24 @@ button {
 /*to change props of placeholder*/
 ::placeholder {
   color: #cdcbd7;
+}
+
+.input_group {
+  border: 1px solid var(--border-color);
+  border-radius: 30px;
+  display: flex;
+}
+
+.input_group .input {
+  border: none;
+  flex-grow: 1;
+  padding: 1rem;
+}
+
+.input_group .btn {
+  margin: 2px;
+  border-radius: 30px;
+  padding: 1rem 3rem;
 }
 
 @media screen and (min-width: 1024px) {
