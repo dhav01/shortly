@@ -14,12 +14,20 @@ html {
   font-size: 62.5%;
 }
 
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  /*to make sure elements dont get leaked out of screen*/
+}
+
 :root {
   --heading: #20063b; /*planning to use it for heading*/
   --color-primary: #7868e6;
   --color-secondary: #f18805;
   --white: #fcfcfc;
   --font: 'Inter', sans-serif;
+  --button-color: #46237a;
 }
 
 body {
@@ -175,4 +183,50 @@ a {
 /*To add colours to our icon*/
 .icon__primary {
   fill: var(--color-primary);
+}
+
+/*Buttons*/
+button {
+  cursor: pointer;
+  text-align: center;
+
+  border: 0;
+  white-space: nowrap;
+}
+.btn {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin: 1rem 0;
+  padding: 1.5rem 3rem;
+  border-radius: 6px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.btn__primary {
+  background: var(--button-color);
+}
+
+.btn__primary:hover {
+  background: #5e24b5;
+}
+
+.btn__secondary {
+  background: var(--color-secondary);
+}
+
+.btn__secondary:hover {
+  background: #fc981c;
+}
+
+.btn-inline {
+  width: 100%;
+  display: inline-block;
+}
+
+@media screen and (min-width: 1024px) {
+  .btn {
+    font-size: 1.5rem;
+  }
 }
