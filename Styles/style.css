@@ -10,7 +10,6 @@ to make calculations easy, we set font size of html as 62.5% which makes 1 rem =
 
 /*Typography*/
 html {
-  margin: 0.5rem;
   font-size: 62.5%;
 }
 
@@ -171,15 +170,15 @@ a {
 
 /*to add circle behind icon*/
 .icon_container {
-  background: rgb(126, 125, 122);
+  background: var(--button-color);
   width: 64px;
   height: 64px;
   border-radius: 100%;
   /*as span is inline element, we cannot apply width and height prop*/
-  /* display: inline; */
+  display: inline-flex;
   /*we are using inline-flex to center the icon inside this container*/
-  /* justify-content: center;
-  align-items: center; */
+  justify-content: center;
+  align-items: center;
 }
 
 /*To add colours to our icon*/
@@ -287,17 +286,18 @@ button {
 
 .card {
   position: relative;
-  width: 35rem;
   background: var(--white);
   margin: 10px;
   margin-bottom: 3rem;
   padding: 3rem;
-  /* border: 1px solid grey; */
-  border-radius: 15px;
-  box-shadow: 1px 5px 15px 2px rgba(212, 192, 192, 0.83);
-  -webkit-box-shadow: 1px 5px 15px 2px rgba(212, 192, 192, 0.83);
-  -moz-box-shadow: 1px 5px 15px 2px rgba(212, 192, 192, 0.83);
+
+  overflow: hidden;
+  border-radius: 7px;
+  box-shadow: 0 0 20px 10px #f3f3f3;
+  overflow: hidden;
 }
+
+/*Use this code in card if something breaks*/
 
 .card_image {
   position: absolute;
@@ -316,18 +316,39 @@ button {
   display: grid;
 }
 
-/**starting from tablets we want to show col side by side **/
+/**For tablets we want 2 cols but for desktop we need 3 cols **/
 
 @media screen and (min-width: 768px) {
   .grid--cols-2 {
     grid-template-columns: 1fr 1fr;
   }
+}
 
-  /**just incase you need three col grid **/
+@media screen and (min-width: 1024px) {
   .grid--cols-3 {
     grid-template-columns: repeat(
       3,
       1fr
     ); /*no difference wrt to .grid--cols-2; can write in both ways*/
   }
+}
+
+/*Testimonials: in case you need to add*/
+
+.testimonial {
+  padding: 4rem 3rem;
+}
+
+.testimonial_img_with_icon {
+  position: relative;
+}
+
+.testimonial_img {
+  width: 100%; /*Here 100% means 100% width of its container. so if size of container reduces, img changes size accordingly */
+}
+
+.testimonial_img_with_icon > .icon_container {
+  position: absolute;
+  left: 3.2rem;
+  top: -3.2rem;
 }
