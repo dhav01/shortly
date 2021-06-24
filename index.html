@@ -17,18 +17,37 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="card testimonial">
-      <div class="grid grid--cols-2">
-        <div class="testimonial_img_with_icon">
-          <img src="Assets/testimonial.jpg" alt="" class="testimonial_img" />
-          <span class="icon_container">
-            <svg class="icon icon__primary">
-              <use xlink:href="Assets/sprite.svg#user-avatar"></use>
-            </svg>
-          </span>
+    <header>
+      <nav class="nav collapsible">
+        <a href="/"><img src="Assets/logo.svg" alt="" /></a>
+        <svg class="icon nav__toggler">
+          <use xlink:href="Assets/sprite.svg#icons8-menu"></use>
+        </svg>
+        <ul class="list nav__list collapsible__content">
+          <li class="nav__item"><a href="#">Features</a></li>
+          <li class="nav__item"><a href="#">Pricing</a></li>
+          <li class="nav__item"><a href="#">Resources</a></li>
+          <li class="nav__item"><a href="#">Support</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="block hero">
+      <div class="grid grid--cols-2 hero_align">
+        <div class="block__header hero__content">
+          <h1>Link Shortener for Pros</h1>
+          <h2 class="hero__tagline">
+            A URL shortener built with powerful tools to help you grow and
+            protect your brand.
+          </h2>
+          <a href="" class="btn btn__primary">Get Started</a>
         </div>
-        <div style="height: 100px; background: blue"></div>
+        <img src="Assets/11_Success-1.jpg" class="hero__image" alt="" />
       </div>
+    </section>
+    <div class="input_group">
+      <input type="text" class="input" placeholder="Please write something.." />
+      <button class="btn btn__primary">Shorten</button>
     </div>
+    <script src="js/main.js"></script>
   </body>
 </html>
