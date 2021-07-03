@@ -253,12 +253,13 @@ button {
   border: 1px solid var(--border-color);
   border-radius: 30px;
   display: flex;
+  justify-content: center;
 }
 
 .input_group .input {
   border: none;
   flex-grow: 1;
-  padding: 1rem;
+  padding: 1.5rem 2rem;
 }
 
 .input_group .btn {
@@ -279,7 +280,7 @@ button {
   margin-top: 50px;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .container {
     display: flex;
   }
@@ -310,6 +311,53 @@ button {
 
 .content h3 {
   margin-top: 0;
+}
+
+/*Plans*/
+/* Plans */
+.plan {
+  transition: transform 0.2s ease-out;
+}
+
+.plan__name {
+  color: var(--color-primary);
+  margin: 0;
+  font-weight: 500;
+  font-size: 2.4rem;
+}
+
+.plan__price {
+  font-size: 6rem;
+}
+
+.plan__billing-cycle {
+  font-size: 2.4rem;
+  font-weight: 300;
+  opacity: 0.8;
+  margin-right: 1rem;
+}
+
+.plan__description {
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  display: block;
+}
+
+.plan .list__item {
+  margin-bottom: 2rem;
+}
+
+.plan--popular {
+  transform: scale(1.1);
+}
+
+.plan--popular .card__header {
+  position: relative;
+}
+
+.plan:hover {
+  transform: scale(1.05);
 }
 
 /*Grid layout */
@@ -504,3 +552,19 @@ button {
 }
 
 /*url shortener*/
+.shortner {
+  margin: 0 0.5rem 1rem;
+  padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .shortner {
+    margin: 0 5rem 1rem;
+  }
+}
+
+/*Features*/
+.feature_img {
+  width: 100%;
+  height: auto;
+}
