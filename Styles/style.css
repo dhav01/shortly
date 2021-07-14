@@ -164,6 +164,14 @@ a {
 
 /*Icons*/
 
+.yellow {
+  color: yellow;
+}
+
+.yellowBorder {
+  border: 5px solid blue;
+}
+
 .icon {
   width: 40px;
   height: 40px;
@@ -299,6 +307,13 @@ button {
   overflow: hidden;
 }
 
+.feature_card {
+  flex: 1;
+  padding: 16px;
+  /* height: fit-content;
+  gap: 4rem; */
+}
+
 /*Use this code in card if something breaks*/
 
 .card_image {
@@ -369,6 +384,7 @@ button {
 
 @media screen and (min-width: 768px) {
   .grid--cols-2 {
+    padding: 0 4rem;
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -554,7 +570,7 @@ button {
 /*url shortener*/
 .shortner {
   margin: 0 0.5rem 1rem;
-  padding: 0;
+  padding: 5rem 20rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -564,7 +580,30 @@ button {
 }
 
 /*Features*/
+
+.features {
+  display: flex;
+  /* flex-direction: column; */
+  width: 100%;
+}
+
 .feature_img {
   width: 100%;
-  height: auto;
+  /* height: 200; */
+}
+
+.feature_heading {
+  color: var(--heading);
+}
+
+.section-heading {
+  color: var(--heading);
+  size: 35px;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .section-heading {
+    font-size: 4rem;
+  }
 }
