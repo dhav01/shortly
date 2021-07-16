@@ -24,10 +24,9 @@
           <use xlink:href="Assets/sprite.svg#icons8-menu"></use>
         </svg>
         <ul class="list nav__list collapsible__content">
-          <li class="nav__item"><a href="#">Features</a></li>
-          <li class="nav__item"><a href="#">Pricing</a></li>
-          <li class="nav__item"><a href="#">Resources</a></li>
-          <li class="nav__item"><a href="#">Support</a></li>
+          <li class="nav__item"><a href="#features">Features</a></li>
+          <li class="nav__item"><a href="#pricing">Pricing</a></li>
+          <li class="nav__item"><a href="#contact-us">Support</a></li>
         </ul>
       </nav>
     </header>
@@ -39,7 +38,7 @@
             A URL shortener built with powerful tools to help you grow and
             protect your brand.
           </h2>
-          <a href="#action" class="btn btn__primary">Get Started</a>
+          <a href="#pricing" class="btn btn__primary">Get Started</a>
         </div>
         <img src="Assets/11_Success-1.jpg" class="hero__image" alt="" />
       </div>
@@ -55,7 +54,7 @@
         <button class="btn btn__primary">Shorten</button>
       </div>
     </div>
-    <h3 class="section-heading">Plans and Pricing</h3>
+    <h3 class="section-heading" id="pricing">Plans and Pricing</h3>
     <section class="block container">
       <div class="grid grid--cols-3">
         <div class="plan">
@@ -122,7 +121,7 @@
           </div>
       </div>
     </section>
-    <h3 class="section-heading">Features</h3>
+    <h3 class="section-heading" id="features">Features</h3>
     <section class="block container">
       <article class="grid grid--cols-3">
       <!-- <div class="features">
@@ -156,7 +155,7 @@
             </div>
           </div>       -->
           <div class="plan">
-          <div class="card">
+          <div class="card feature_card">
             <header class="card__header">
               <img class="feature_img" src="Assets/brand.jpg">
               <h3 class="feature_heading">Replace "Short.ly" with your brand</h3>
@@ -168,7 +167,7 @@
           </div>
       </div>
       <div class="plan">
-          <div class="card">
+          <div class="card feature_card">
             <header class="card__header">
               <img class="feature_img" src="Assets/reports.jpg" alt="">
               <h3 class="feature_heading">Understand your Audience</h3>
@@ -180,7 +179,7 @@
           </div>
       </div>
       <div class="plan">
-          <div class="card">
+          <div class="card feature_card">
             <header class="card__header">
               <img class="feature_img" src="Assets/tracking.jpg" alt="">
               <h3 class="feature_heading">Short links solve big problems</h3>
@@ -193,6 +192,23 @@
       </div>
     </article>
     </section>
+    <section id="contact-us">
+    <h3 class="section-heading">
+    Contact Us
+    </h3>
+  <div class="contact-us">
+    <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_bp1bwvhv.json"  background="transparent"  speed="0.5"  style="width: 480px; height: 480px;"  loop  autoplay></lottie-player>
+    
+  <div class="contactalign">
+    <h2>Let's Get in Touch!</h2>
+    <div class="contact-input">
+      <input type="email" placeholder="example@gmail.com"/>
+      <a href="#">Send</a>
+    </div>
+  </div>
+  </div>
+</section>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
